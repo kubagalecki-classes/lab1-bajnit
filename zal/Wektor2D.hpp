@@ -21,10 +21,10 @@ class Wektor2D
         std::cout << "x-> " << x << " y-> " <<  y << "\n";
     }
 
-  Wektor2D(){
+  Wektor2D() : x(0), y(0)
+    {
         ++num_wek;
-        x = 0;
-        y = 0;
+        
     }
 
     ~Wektor2D(){
@@ -70,3 +70,4 @@ std::ostream& operator<<(std::ostream& os, Wektor2D v_1){
     os<< "["<< v_1.getX()<<","<< v_1.getY()<<"]";
     return os;
 }
+
