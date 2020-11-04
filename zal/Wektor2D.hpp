@@ -1,17 +1,6 @@
 #include <iostream>
 #include <cmath>
 
-struct informer{
-    informer(){
-       // std::cout << "informer skonstrowany"<<"\n";
-    }
-
-    ~informer(){
-       // std::cout << "informer uległ destrukcji"<<"\n";
-    }
-
-};
-
 class Wektor2D
 {
     
@@ -43,13 +32,8 @@ class Wektor2D
        // std::cout << "Destruktor"<<"\n";
     }
 
-    informer loki;
-    
-
    
     private:
-
-
 
     double x;
     double y;
@@ -73,11 +57,11 @@ Wektor2D operator+(Wektor2D& v_1, Wektor2D& v_2){
     return Wektor2D(wynik_x,wynik_y);
 }
 
- Wektor2D operator*(double scalar,Wektor2D v_1){
+ double operator*(Wektor2D v_1,Wektor2D v_2){
 
-        double wynik_x = scalar * v_1.getX();
-        double wynik_y = scalar * v_1.getY();
-        return Wektor2D(wynik_x,wynik_y);
+        double wynik_x = v_1.getX() * v_2.getX();
+        double wynik_y = v_1.getY() * v_2.getX();
+        return wynik_x+wynik_y;
     }
 
 
