@@ -45,7 +45,7 @@ Wektor2D operator+(Wektor2D& v_1, Wektor2D& v_2){
  double operator*(Wektor2D v_1,Wektor2D v_2){
 
         double wynik_x = v_1.getX() * v_2.getX();
-        double wynik_y = v_1.getY() * v_2.getX();
+        double wynik_y = v_1.getY() * v_2.getY();
         return wynik_x+wynik_y;
     }
 
